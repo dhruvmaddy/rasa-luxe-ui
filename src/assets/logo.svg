@@ -1,0 +1,31 @@
+<svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="60" fill="none"/>
+  
+  <!-- Candle Icon -->
+  <g>
+    <!-- Candle Body -->
+    <rect x="30" y="15" width="20" height="30" rx="2" fill="url(#candleGradient)"/>
+    <!-- Flame -->
+    <path d="M 40 10 Q 35 5 40 0 Q 45 5 40 10" fill="#FF6B6B"/>
+    <!-- Flame Glow -->
+    <path d="M 40 12 Q 32 8 35 0 Q 48 6 40 12" fill="#FFA500" opacity="0.6"/>
+  </g>
+
+  <!-- Text: Rasa Luxe -->
+  <text x="60" y="38" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#textGradient)">
+    Rasa Luxe
+  </text>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="candleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9333EA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

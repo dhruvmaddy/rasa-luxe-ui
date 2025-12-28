@@ -1,0 +1,58 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-rose-700 via-rose-600 to-pink-600 text-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Other Collections</h1>
+      <p class="text-lg md:text-xl text-rose-100">Explore our luxurious wax sachets and pearls collection</p>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center">Wax Products</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Discover our curated collection of premium wax products</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div *ngFor="let category of othersCategories"
+           (click)="selectCategory(category.id)"
+           class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 cursor-pointer transition-all duration-300 border border-gray-100 overflow-hidden"
+           [class.ring-2]="selectedCategory === category.id"
+           [class.ring-rose-500]="selectedCategory === category.id"
+           [class.scale-105]="selectedCategory === category.id">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-2xl font-bold text-gray-900">{{ category.name }}</h3>
+          <span class="text-3xl">🌸</span>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">{{ category.description }}</p>
+        <button class="w-full bg-rose-600 text-white px-4 py-3 rounded-lg hover:bg-rose-700 transition font-semibold">
+          View Products
+        </button>
+
+        <!-- Expanded Content -->
+        <div *ngIf="selectedCategory === category.id" class="mt-8 pt-8 border-t-2 border-gray-200 animate-fadeIn">
+          <p class="text-gray-700 mb-6">Explore our <strong>{{ category.name }}</strong> collection and add a touch of elegance to your home.</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-200 hover:border-rose-400 transition text-center">
+              <p class="font-semibold text-gray-900">Product 1</p>
+              <p class="text-sm text-gray-600 mt-2">Premium quality</p>
+            </div>
+            <div class="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-200 hover:border-rose-400 transition text-center">
+              <p class="font-semibold text-gray-900">Product 2</p>
+              <p class="text-sm text-gray-600 mt-2">Premium quality</p>
+            </div>
+            <div class="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-200 hover:border-rose-400 transition text-center">
+              <p class="font-semibold text-gray-900">Product 3</p>
+              <p class="text-sm text-gray-600 mt-2">Premium quality</p>
+            </div>
+            <div class="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-200 hover:border-rose-400 transition text-center">
+              <p class="font-semibold text-gray-900">Product 4</p>
+              <p class="text-sm text-gray-600 mt-2">Premium quality</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
